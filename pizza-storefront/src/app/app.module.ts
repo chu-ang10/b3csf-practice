@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './components/main.component';
 import { RouterModule, Routes } from '@angular/router';
 import { OrdersComponent } from './components/orders.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   {path: '', component: MainComponent},
@@ -16,11 +18,13 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     MainComponent,
-    OrdersComponent,
-  ],
+    OrdersComponent  ],
   imports: [
     BrowserModule, 
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule, 
+    HttpClientModule
+
   ],
 
   providers: [ ],
